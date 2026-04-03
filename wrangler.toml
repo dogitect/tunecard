@@ -1,0 +1,22 @@
+#:schema node_modules/wrangler/config-schema.json
+
+# TuneCard by Dogitect — Cloudflare Worker Configuration
+# User worker serves Angular SPA via Workers Static Assets,
+# handling security headers, redirects, and caching.
+
+# ── Worker entry ─────────────────────────────────────────────
+name = "tunecard"
+main = "worker/src/index.ts"
+compatibility_date = "2026-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# ── Static assets (Angular SPA) ─────────────────────────────
+[assets]
+directory = "dist/tunecard/browser"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+
+# ── Routing ──────────────────────────────────────────────────
+routes = [
+  { pattern = "tunecard.dogitect.io", custom_domain = true },
+]
