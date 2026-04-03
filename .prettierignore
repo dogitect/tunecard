@@ -1,0 +1,19 @@
+# Build outputs
+dist/
+coverage/
+.angular/
+out-tsc/
+
+# Dependencies
+node_modules/
+
+# Lockfiles
+bun.lock
+
+# Cloudflare
+worker/.wrangler/
+
+# Misc
+*.min.js
+*.min.css
+*.tsbuildinfo
