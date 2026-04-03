@@ -1,0 +1,13 @@
+<div class="home">
+  <div class="content">
+    <div class="scroller-column">
+      <app-platform-scroller />
+    </div>
+    <div class="input-column">
+      <app-link-input (linkSubmitted)="onLinkSubmitted($event)" />
+      @if (errorMessage()) {
+        <p class="error">{{ errorMessage() }}</p>
+      }
+    </div>
+  </div>
+</div>
