@@ -1,0 +1,86 @@
+/**
+ * @license
+ * Copyright 2026 Leon Xia. All rights reserved.
+ * SPDX-License-Identifier: MIT
+ */
+
+:host {
+  display: block;
+}
+
+/* Golden ratio: width 360px, height ≈ 360 × 1.618 = 582px (natural flow). */
+.card {
+  position: relative;
+  width: 360px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow:
+    0 2px 8px rgb(0 0 0 / 0.04),
+    0 8px 32px rgb(0 0 0 / 0.08);
+  overflow: hidden;
+}
+
+.cover {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.info {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px 20px;
+  gap: 12px;
+}
+
+.text {
+  flex: 1;
+  min-width: 0;
+  padding-top: 2px;
+}
+
+.title {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin: 0;
+  line-height: 1.35;
+  letter-spacing: -0.022em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.artist {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #86868b;
+  margin: 3px 0 0;
+  line-height: 1.35;
+  letter-spacing: -0.008em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Phone: scale card to fit screen. */
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .info {
+    padding: 14px 16px;
+    gap: 10px;
+  }
+
+  .title {
+    font-size: 0.9375rem;
+  }
+
+  .artist {
+    font-size: 0.75rem;
+  }
+}
