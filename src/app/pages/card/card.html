@@ -1,0 +1,18 @@
+@if (metadata(); as meta) {
+  <div class="card-page">
+    <div #cardRef>
+      <app-music-card [metadata]="meta" />
+    </div>
+
+    <div class="actions">
+      <button class="download-btn" (click)="download()" [disabled]="isExporting()">
+        @if (isExporting()) {
+          Exporting...
+        } @else {
+          Download
+        }
+      </button>
+      <button class="another-btn" (click)="createAnother()">Create another</button>
+    </div>
+  </div>
+}
