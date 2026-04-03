@@ -1,0 +1,11 @@
+<div class="card">
+  <img [src]="imageUrl()" [alt]="metadata().title" class="cover" crossorigin="anonymous" />
+
+  <div class="info">
+    <div class="text">
+      <h2 class="title">{{ metadata().title }}</h2>
+      <p class="artist">{{ metadata().artist }}</p>
+    </div>
+    <app-qr-code [url]="metadata().originalUrl" [size]="56" />
+  </div>
+</div>
