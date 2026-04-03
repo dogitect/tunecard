@@ -1,0 +1,29 @@
+/**
+ * @license
+ * Copyright 2026 Leon Xia. All rights reserved.
+ * SPDX-License-Identifier: MIT
+ */
+
+@import 'tailwindcss';
+
+@theme {
+  --font-sans:
+    'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', system-ui,
+    sans-serif;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  color: #1d1d1f;
+  background: #fbfbfd;
+}
+
+::selection {
+  background: rgba(0 122 255 / 0.15);
+}
