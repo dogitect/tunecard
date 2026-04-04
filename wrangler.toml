@@ -10,13 +10,13 @@ main = "worker/src/index.ts"
 compatibility_date = "2026-01-01"
 compatibility_flags = ["nodejs_compat"]
 
+# ── Routing ──────────────────────────────────────────────────
+routes = [
+  { pattern = "tunecard.dogitect.io", custom_domain = true },
+]
+
 # ── Static assets (Angular SPA) ─────────────────────────────
 [assets]
 directory = "dist/tunecard/browser"
 binding = "ASSETS"
 not_found_handling = "single-page-application"
-
-# ── Routing ──────────────────────────────────────────────────
-routes = [
-  { pattern = "tunecard.dogitect.io", custom_domain = true },
-]
