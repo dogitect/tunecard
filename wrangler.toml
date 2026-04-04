@@ -10,6 +10,10 @@ main = "worker/src/index.ts"
 compatibility_date = "2026-01-01"
 compatibility_flags = ["nodejs_compat"]
 
+# ── Build ─────────────────────────────────────────────────────
+[build]
+command = "bun run build"
+
 # ── Routing ──────────────────────────────────────────────────
 routes = [
   { pattern = "tunecard.dogitect.io", custom_domain = true },
